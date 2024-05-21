@@ -11,8 +11,8 @@
 @media (prefers-color-scheme: dark) {
   :root {
     --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
+    --background-start-rgb: 63, 82, 119;
+    --background-end-rgb: 63, 82, 119;
   }
 }
 
@@ -30,4 +30,27 @@ body {
   .text-balance {
     text-wrap: balance;
   }
+}
+
+.workshop-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.workshop-container * {
+  font-family: Consolas, "Courier New", monospace;
+}
+
+.workshop-title {
+  font-size: 3rem;
+  font-weight: 700;
+  color: lightgrey;
+}
+
+.workspace {
+  height: 100vh;
+  width: 75vw;
+  margin: 0 2rem 1rem 2rem;
+  background-color: rgb(108, 131, 177);
 }
