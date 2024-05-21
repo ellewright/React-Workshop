@@ -1,10 +1,18 @@
 function Workspace() {
+
+  const firstName = <h2>Ellie</h2>;
+  const age = <p>23</p>;
+  const email = <p>email@address.com</p>;
+
     return (
         <div className="workspace">
-          <p>This workshop was created on May 21, 2024.</p>
+          <p>May 21, 2024</p>
+          <User firstName="Ellie" age={23} email="email@address.com" />
+          <User firstName="Kennedy" age={22} email="email2@address.com" />
+          <User firstName="Randy" age={45} email="randymarsh@southpark.com" />
         </div>
     );
-}
+};
 
 export default function Workshop() {
     return (
@@ -15,4 +23,12 @@ export default function Workshop() {
         <Workspace />
       </div>
     );
-}
+};
+
+const User = (props) => {
+  return (
+    <div>
+      {props.firstName} {props.age} {props.email}
+    </div>
+  );
+};
