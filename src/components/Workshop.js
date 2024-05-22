@@ -1,15 +1,22 @@
+import { User } from "./User";
 function Workspace() {
 
-  const firstName = <h2>Ellie</h2>;
-  const age = <p>23</p>;
-  const email = <p>email@address.com</p>;
+    const users = [
+      { firstName: "Eleanor", age: 23, email: "email@address.com" },
+      { firstName: "Ken", age: 22, email: "email2@address.com"},
+      { firstName: "Bettie", age: 3, email: "bettie@coolcat.com" },
+    ];
 
     return (
         <div className="workspace">
-          <p>May 21, 2024</p>
-          <User firstName="Ellie" age={23} email="email@address.com" />
-          <User firstName="Kennedy" age={22} email="email2@address.com" />
-          <User firstName="Randy" age={45} email="randymarsh@southpark.com" />
+          <p>May 22, 2024: .map() function</p>
+          <div>
+            {users.map((user, key) => {
+              return (
+                <User key={key} firstName={user.firstName} age={user.age} email={user.email} />
+              );
+            })}
+          </div>
         </div>
     );
 };
@@ -23,12 +30,4 @@ export default function Workshop() {
         <Workspace />
       </div>
     );
-};
-
-const User = (props) => {
-  return (
-    <div>
-      {props.firstName} {props.age} {props.email}
-    </div>
-  );
 };
