@@ -1,21 +1,29 @@
-import { User } from "./User";
+import { Planets } from "./Planets";
 function Workspace() {
 
-    const users = [
-      { firstName: "Eleanor", age: 23, email: "email@address.com" },
-      { firstName: "Ken", age: 22, email: "email2@address.com"},
-      { firstName: "Bettie", age: 3, email: "bettie@coolcat.com" },
+    const planets = [
+      { planet: "Mercury", isGasPlanet: false },
+      { planet: "Venus", isGasPlanet: false },
+      { planet: "Earth", isGasPlanet: false },
+      { planet: "Mars", isGasPlanet: false },
+      { planet: "Jupiter", isGasPlanet: true },
+      { planet: "Saturn", isGasPlanet: true },
+      { planet: "Uranus", isGasPlanet: true },
+      { planet: "Neptune", isGasPlanet: true },
+      { planet: "Pluto", isGasPlanet: false },
     ];
 
     return (
         <div className="workspace">
-          <p>May 22, 2024: .map() function</p>
+          <p>May 22, 2024: Use .map() function to show our solar system's gas planets.</p>
           <div>
-            {users.map((user, key) => {
+          {planets.map((planet, key) => {
+            if (planet.isGasPlanet) {
               return (
-                <User key={key} firstName={user.firstName} age={user.age} email={user.email} />
+                <Planets key={key} planet={planet.planet} />
               );
-            })}
+            }
+          })}
           </div>
         </div>
     );
