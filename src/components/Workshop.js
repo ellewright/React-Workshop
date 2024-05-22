@@ -15,7 +15,7 @@ function Workspace() {
 
     return (
         <div className="workspace">
-          <p>May 22, 2024: Use .map() function to show our solar system's gas planets.</p>
+          <p>May 22, 2024: Use .map() function to show our solar system&apos;s gas planets.</p>
           <div>
           {planets.map((planet, key) => {
             if (planet.isGasPlanet) {
