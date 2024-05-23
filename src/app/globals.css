@@ -55,3 +55,21 @@ body {
   background-color: rgb(108, 131, 177);
   padding: 2rem;
 }
+
+.counter button {
+  width: 64px;
+  height: 64px;
+  background-color: #b1bdd6;
+  border-radius: 5px;
+  font-size: 32px;
+}
+
+.count {
+  width: 64px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: black;
+  background-color: white;
+  font-size: 32px;
+}
