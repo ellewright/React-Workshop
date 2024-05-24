@@ -5,7 +5,7 @@ export default function AddExpenseForm() {
 
     function onSubmit() {
         console.log("Submitting form...");
-    }
+    };
 
     return (
         <div className="add-expense-form">
@@ -22,7 +22,7 @@ export default function AddExpenseForm() {
             </div>
         </div>
     );
-}
+};
 
 export function ExpenseList() {
     return (
@@ -31,4 +31,4 @@ export function ExpenseList() {
             </ul>
         </div>
     );
-}
+};

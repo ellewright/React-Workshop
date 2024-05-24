@@ -1,8 +1,8 @@
-import Counter from "./Counter";
+import ToDo from "./ToDoList";
 function Workspace() {
     return (
         <div className="workspace">
-          <Counter />
+          <ToDo />
         </div>
     );
 };
@@ -14,7 +14,7 @@ export default function Workshop() {
           <h1>React Workshop</h1>
         </div>
         <div className="date">
-          <p>May 23, 2024: useState & Counter App</p>
+          <p>May 24, 2024: To-Do List</p>
         </div>
         <Workspace />
       </div>
